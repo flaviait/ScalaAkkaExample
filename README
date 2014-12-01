@@ -2,43 +2,44 @@ Akka Vortrag - Kassel Code Meetup 19.11.2014
 Tobias Kilian
 Flavia-IT
 
-✔ Einleitung @done (14-11-19 19:59)
+✔ Einleitung
 
 0. Neue Play2 Anwendung erstellen
- ✔ play new @done (14-11-19 20:01)
- ✔ play idea @done (14-11-19 20:02)
- ✔ Anwendung in Idea öffnen @done (14-11-19 20:05)
- ✔ play run @done (14-11-19 20:05)
+ ✔ play new
+ ✔ play idea
+ ✔ Anwendung in Idea öffnen
+ ✔ play run
 
 1. Nachrichten senden: Hello World Beispiel konstruieren
- ✔ neuen HelloWorld Actor in package actors anlegen @done (14-11-19 20:06)
- ✔ receive-Methode override @done (14-11-19 20:06)
- ✔ einfache case class für Nachrichten definieren: @done (14-11-19 20:07)
-     case class Message(msg: String)
- ✔ ActorLogging trait nutzen @done (14-11-19 20:07)
- ✔ receive Methode definieren mit log.warning statement  @done (14-11-19 20:09)
- ✔ Actor in Application erzeugen lassen (1) @done (14-11-19 20:11)
- ✔ Action index in Application ändern, um Nachricht an Actor zu senden @done (14-11-19 20:11)
- ✔ Play Demo Template leeren, main mit message ersetzen @done (14-11-19 20:14)
- ✔ Seite aufrufen und Logausgabe demonstrieren @done (14-11-19 20:15)
- ✔ Für Farben in der Console: Logging mit slf4j konfigurieren (2) logger.root=INFO @done (14-11-19 20:16)
+ ✔ neuen HelloWorld Actor in package actors anlegen
+ ✔ receive-Methode override
+ ✔ einfache case class für Nachrichten definieren: 
+ 		case class Message(msg: String)
+ ✔ ActorLogging trait nutzen
+ ✔ receive Methode definieren mit log.warning statement
+ ✔ Actor in Application erzeugen lassen (1)
+ ✔ Action index in Application ändern, um Nachricht an Actor zu senden
+ ✔ Play Demo Template leeren, main mit message ersetzen
+ ✔ Seite aufrufen und Logausgabe demonstrieren
+ ✔ Für Farben in der Console: Logging mit slf4j konfigurieren (2)
+ 		logger.root=INFO
  
 2. Fragen an Actor stellen
- ✔ Aus ! ein ? machen. val answer definieren. Return-Type? @done (14-11-19 20:18)
- ✔ Ein paar nötige Imports (3) @done (14-11-19 20:26)
- ✔ Compile failed: Implicit timeout definieren @done (14-11-19 20:32)
-    implicit val timeout = Timeout(5 seconds)
- ✔ Return-Value mappen x => Ok(x.toString) und Action.async verwenden @done (14-11-19 20:26)
- ✔ Ausprobieren. uuups Timeout @done (14-11-19 20:32)
- ✔ Antwort in Actor senden: sender ! message @done (14-11-19 20:32)
+ ✔ Aus ! ein ? machen. val answer definieren. Return-Type?
+ ✔ Ein paar nötige Imports (3)
+ ✔ Compile failed: Implicit timeout definieren
+		implicit val timeout = Timeout(5 seconds)
+ ✔ Return-Value mappen x => Ok(x.toString) und Action.async verwenden
+ ✔ Ausprobieren. uuups Timeout
+ ✔ Antwort in Actor senden: sender ! message
 
 3. Routing: RoundRobin vs Broadcast..
- ✔ Props.withRouting demonstrieren. Verschiedene Router Impls zeigen. @done (14-11-19 20:39)
- ✔ RoundRobinRouter einbauen @done (14-11-19 20:39)
- ✔ $self zur Logausgabe hinzufügen und zeigen, was passiert @done (14-11-19 20:39)
- ✔ BroadcastRouter verwenden und zeigen, was passiert @done (14-11-19 20:39)
- ✔ DeadLetters erklären @done (14-11-19 20:40)
+ ✔ Props.withRouting demonstrieren. Verschiedene Router Impls zeigen.
+ ✔ RoundRobinRouter einbauen
+ ✔ $self zur Logausgabe hinzufügen und zeigen, was passiert
+ ✔ BroadcastRouter verwenden und zeigen, was passiert
+ ✔ DeadLetters erklären
 
 
 Lokaler Zustand: Warum mutables hier kein Problem sind.
-  ✔ var count zu HelloWorld Actor hinzufügen, mitzählen und ausgeben. @done (14-11-19 20:50)
+  ✔ var count zu HelloWorld Actor hinzufügen, mitzählen und ausgeben.
